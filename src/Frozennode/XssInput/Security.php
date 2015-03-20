@@ -199,7 +199,7 @@ class Security {
 		 * So this: <blink>
 		 * Becomes: &lt;blink&gt;
 		 */
-		$naughty = 'alert|applet|audio|basefont|base|behavior|bgsound|blink|body|embed|expression|form|frameset|frame|head|html|ilayer|iframe|input|isindex|layer|link|meta|object|plaintext|script|textarea|title|video|xml|xss';
+		$naughty = 'alert|applet|audio|basefont|base|behavior|bgsound|blink|body|embed|expression|form|frameset|frame|head|html|ilayer|input|isindex|layer|link|meta|object|plaintext|script|textarea|title|video|xml|xss';
 		$str = preg_replace_callback('#<(/*\s*)('.$naughty.')([^><]*)([><]*)#is', function($matches){
 					// encode opening brace
 					$str = '&lt;'.$matches[1].$matches[2].$matches[3];
